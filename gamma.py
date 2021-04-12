@@ -12,6 +12,7 @@ import cv2
 import numpy as np
 from ex1_utils import LOAD_GRAY_SCALE, LOAD_RGB
 
+#0-2 in jumps of 0.1 is 200 values
 gamma_slider_max = 200
 title_window = 'gamma correction'
 
@@ -25,7 +26,7 @@ https://docs.opencv.org/3.4/da/d6a/tutorial_trackbar.html
 https://stackoverflow.com/questions/60540494/is-it-possible-to-do-partial-gamma-adjust-using-opencvs-lut
 """
 def on_trackbar(val):
-    global im
+    #global im
     gamma = val / 100
     if gamma == 0:
         gamma = 0.1
