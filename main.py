@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import numpy as np
+import cv2
+from ex1_utils import imReadAndConvert, imDisplay, transformYIQ2RGB, transformRGB2YIQ, hsitogramEqualize, quantizeImage
+from typing import List
+from PIL import Image
+from matplotlib import pyplot as plt
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+LOAD_GRAY_SCALE = 1
+LOAD_RGB = 2
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    # imDisplay("beach.jpg", 5)
+    # imEq, histOrig, histEq = hsitogramEqualize(imReadAndConvert("bac_con.png", 3))
+    #
+    # plt.imshow(imReadAndConvert("bac_con.png", 3))
+    # plt.show()
+    # plt.imshow(imEq)
+    # plt.show()
+    # plt.hist(histOrig)
+    # plt.show()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    qImage_i_list, err_i_list = quantizeImage(imReadAndConvert("bac_con.png", 3), 3, 2)
+    print('qImage_i_list: ', qImage_i_list)
+    plt.imshow(qImage_i_list[0])
+    plt.show()
