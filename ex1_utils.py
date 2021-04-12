@@ -141,6 +141,10 @@ def hsitogramEqualize(imgOrig: np.ndarray) -> (np.ndarray, np.ndarray, np.ndarra
     return imgEq, histOrig, histEq
 
 
+"""
+I used the code from here: https://github.com/ido1Shapira/Image_Processing_ex1/blob/master/ex1_utils.py
+I needed a little longer to do it by my one.
+"""
 def fix_q(z: np.array, image_hist: np.ndarray) -> np.ndarray:
     """
         Calculate the new q using wighted average on the histogram
