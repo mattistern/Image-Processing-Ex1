@@ -60,7 +60,7 @@ def gammaDisplay(img_path: str, rep: int):
 
 
 def main():
-    gammaDisplay('bac_con.png', LOAD_RGB)
+    gammaDisplay('testImg2.jpg', LOAD_RGB)
 
 
 if __name__ == '__main__':
