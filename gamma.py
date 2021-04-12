@@ -10,7 +10,7 @@
 """
 import cv2
 import numpy as np
-from ex1_utils import LOAD_GRAY_SCALE, imReadAndConvert, LOAD_RGB
+from ex1_utils import LOAD_GRAY_SCALE, LOAD_RGB
 
 gamma_slider_max = 200
 title_window = 'gamma correction'
